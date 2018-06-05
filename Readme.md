@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
-* Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss/21/user/801375).
-* Наставник: `Екатерина Анплитова`.
+* Студент: [Михаил Ляпунов](https://up.htmlacademy.ru/htmlcss/21/user/801375).
+* Наставник: [Екатерина Анплитова](https://up.htmlacademy.ru/htmlcss/21/user/82969).
 
 ---
 
