@@ -12,14 +12,20 @@
       </a>
     	<nav class="main-navigation">
 	        <ul class="main-menu">
-	          <li class="main-menu__item">Каталог</li>
+	          <li class="main-menu__item"><button class="main-menu__button" type="button">Каталог</button></li>
 	          <li class="main-menu__item"><a class="main-menu__link" href="delivery.html">Доставка и оплата</a></li>
 	          <li class="main-menu__item"><a class="main-menu__link" href="aboutUs.html">О компании</a></li>
 	        </ul>
 	        <ul class="user-menu">
-	        	<li class="user-menu__item user-menu__search"></li>
-          	<li class="user-menu__item user-menu__login-link">Вход</li>
-          	<li class="user-menu__item user-menu__cart">Пусто</li>
+	        	<li class="user-menu__item user-menu__search">
+              <button type="button"><span class="visually-hidden">Поиск</span></button>
+            </li>
+          	<li class="user-menu__item user-menu__login">
+              <a href="login.html">Вход</a>
+            </li>
+          	<li class="user-menu__item user-menu__cart">
+              <button type="button">Пусто</button>
+            </li>
 	        </ul>
     	</nav>
     	<p class="contacts">
@@ -30,6 +36,7 @@
 
     <main>
       <h1 class="visually-hidden">Магазин "Глэйси"</h1>
+
       <section class="carousel">
         <h2 class="visually-hidden">Специальные предложения</h2>
         <div class="carousel__item1">
@@ -48,9 +55,15 @@
           <img src="img/bg/Мороженко6.png" width="326" height="523" alt="Мороженко6">
         </div>
         <button class="carousel__button">Давайте оба!</button>
-        <input type="radio" class="carousel__control carousel__control--active">
-        <input type="radio" class="carousel__control">
-        <input type="radio" class="carousel__control">
+        <button class="carousel__control carousel__control_active" type="button">
+          <span class="visually-hidden">Первое предложение</span>
+        </button>
+        <button class="carousel__control" type="button">
+          <span class="visually-hidden">Второе предложение</span>
+        </button>
+        <button class="carousel__control" type="button">
+          <span class="visually-hidden">Третье предложение</span>
+        </button>
       </section>
 
       <section class="offers">
@@ -59,12 +72,12 @@
           <li class="offers__item">
             <h3>Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <button>Хочу варенье!</button>
+            <button class="offers__button" type="button">Хочу варенье!</button>
           </li>
           <li class="offers__item">
             <h3>Шоколадки даром!</h3>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <button>Хочу шоколадки!</button>
+            <button class="offers__button" type="button">Хочу шоколадки!</button>
           </li>
         </ul>
       </section>
@@ -122,18 +135,26 @@
           </li>
           <li class="news__item">
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <form></form>
+            <form class="news__subscription" action="https://echo.htmlacademy.ru" method="post">
+              <p>
+                <label for="news-email" class="visually-hidden">Почта для рассылки</label>
+                <input id="news-email" type="email" name="email" value="" placeholder="Электронная почта">
+              </p>
+              <button class="news__submit" type="submit">Отправить</button>
+            </form>
           </li>
         </ul>
       </section>
 
       <section class="map-contacts">
         <h2 class="visually-hidden">Карта</h2>
-        <div class="map"></div>
+        <p>
+          <img src="img/bg/map.png" width="1200" height="430" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </p>
         <div class="contacts">
           <p>Адрес главного офиса и офлайн-магазина: <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
           <p>Для заказов по телефону: <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
-          <a class="contacts__link">Форма обратной связи</a>
+          <a class="contacts__link" href="feedback.html">Форма обратной связи</a>
         </div>
       </section>
     </main>
@@ -141,10 +162,10 @@
     <footer class="footer">
       <div class="footer__social social">
         <ul class="social__list">
-          <li><a class="social__link social__link--tw" href="#">Твиттер</a></li>
-          <li><a class="social__link social__link--in" href="#">Инстаграм</a></li>
-          <li><a class="social__link social__link--fb" href="#">Фейсбук</a></li>
-          <li><a class="social__link social__link--vk" href="#">Вконтакте</a></li>  
+          <li><a class="social__link social__link_tw" href="#">Твиттер</a></li>
+          <li><a class="social__link social__link_in" href="#">Инстаграм</a></li>
+          <li><a class="social__link social__link_fb" href="#">Фейсбук</a></li>
+          <li><a class="social__link social__link_vk" href="#">Вконтакте</a></li>  
         </ul>
       </div>
       <p class="footer__nav footer-nav">
@@ -163,8 +184,8 @@
       </div>
     </footer>
     
-    <section class="modal-catalog">
-      <ul class="catalog-menu">
+    <div class="dropdown-catalog">
+      <ul class="dropdown-catalog__menu catalog-menu">
         <li class="catalog-menu__item"><a class="catalog-menu__link" href="fresh.html">Новинки</a></li>
         <hr>
         <li class="catalog-menu__item"><a class="catalog-menu__link" href="scrubbings.html">Щербеты</a></li>
@@ -172,22 +193,61 @@
         <li class="catalog-menu__item"><a class="catalog-menu__link" href="fruitIce.html">Фруктовый лед</a></li>
         <li class="catalog-menu__item"><a class="catalog-menu__link" href="melorin.html">Мелорин</a></li>
       </ul>
+    </div>
+
+    <section class="modal-search">
+      <h2 class="visually-hidden">Поиск</h2>
+      <form class="modal-search__form search-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="search-form-input" class="visually-hidden">Поиск</label>
+          <input id="search-form-input" type="text" name="search" placeholder="Что ищем?">
+        </p>
+        <button class="search-form__button visually-hidden" type="submit">Искать</button>
+      </form>
     </section>
 
     <section class="modal-login">
       <h2 class="visually-hidden">Авторизация</h2>
-      <form></form>
-    </section>
-
-    <section class="modal-search">
-      <h2 class="visually-hidden">Поиск</h2>
-      <form></form>
+      <form class="modal-login__form login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="login-form-email" class="visually-hidden">Почта</label>
+          <input id="login-form-email" type="email" name="email" placeholder="Электронная почта">
+        </p>
+        <p>
+          <label for="login-form-password" class="visually-hidden">Пароль</label>
+          <input id="login-form-password" type="password" name="password" placeholder="Пароль">
+        </p>
+        <div  class="login-form__actions">
+          <button class="login-form__button" type="submit">Войти</button>
+          <p>
+            <a class="login-form__link" href="forgotten-password.html">Забыли пароль?</a>
+            <a class="login-form__link" href="registration.html">Новая регистрация</a>
+          </p>
+        </div>
+      </form>
     </section>
 
     <section class="modal-feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
       <p>Мы обязательно вам ответим!</p>
-      <form></form>
+      <button class="modal-feedback__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <form class="modal-feedback__form feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="feedback-form__item">
+          <label for="feedback-form-input" class="visually-hidden">Ваше имя</label>
+          <input id="feedback-form-name" type="text" name="name" placeholder="Как вас зовут?">
+        </p>
+        <p class="feedback-form__item">
+          <label for="feedback-form-email" class="visually-hidden">Ваша почта</label>
+          <input id="feedback-form-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+        </p>
+        <p class="feedback-form__item">
+          <label for="feedback-form-text" class="visually-hidden">Введите сообщение</label>
+          <textarea id="feedback-form-text" type="text" name="text" placeholder="Напишите что-нибудь..."></textarea> 
+        </p>
+        <button class="feedback-form__button" type="submit">Отправить</button>
+      </form>
     </section>
 
   </body>
