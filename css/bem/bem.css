@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+
+  background-color: #849d8f;
+}
+
+a {
+  color: #ffffff;
+}
+
+.main-menu,
+.user-menu {
+  list-style: none;
+}
+
+.main-menu {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.user-menu {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.main-menu a:hover,
+.main-menu a:focus,
+.main-menu button:hover,
+.main-menu button:focus,
+.user-menu a:hover,
+.user-menu a:focus,
+.user-menu button:hover,
+.user-menu button:focus {
+  background-color: #f7f6f3;
+  color: #333333;
+
+}
+
+.main-menu a:link,
+.main-menu button:link {
+  background-color: #d07058;
+  color: #ffffff;
+}
+
+.contacts .contacts__schedule {
+	font-size: 14px;
+  	line-height: 16px;
+}
+
+.contacts .contacts__tel {
+	font-size: 22px;
+  	line-height: 24px;
+}
+
