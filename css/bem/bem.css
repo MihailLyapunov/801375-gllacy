@@ -13,6 +13,18 @@ body {
 
 a {
   color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+a:hover {
+  color: #ffbc9e;
+}
+
+.header__logo,
+.main-products__link,
+.footer__logo {
+  border: none;
 }
 
 .main-menu,
@@ -25,38 +37,70 @@ a {
   line-height: 18px;
 }
 
+.main-menu__link_catalog:hover,
+.main-menu__link_catalog:focus {
+  border-radius: 25px;
+  background-color: #f8f7f4;  
+  color: #323232;
+}
+
+.main-menu__link_active {
+  border-radius: 25px;
+  color: #ffffff;
+  background-color: #d07058;
+}
+
 .user-menu {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
 }
 
-.main-menu a:hover,
-.main-menu a:focus,
-.main-menu button:hover,
-.main-menu button:focus,
-.user-menu a:hover,
-.user-menu a:focus,
-.user-menu button:hover,
-.user-menu button:focus {
-  background-color: #f7f6f3;
-  color: #333333;
-
+.user-menu a {
+  border-radius: 25px;
+  background-color: #a1b4a9;
+  border: none;
 }
 
-.main-menu a:link,
+.user-menu a:hover,
+.user-menu a:focus {
+  background-color: #f8f7f4;  
+  color: #323232;
+}
+
+/*.main-menu a:link,
 .main-menu button:link {
   background-color: #d07058;
   color: #ffffff;
-}
+}*/
 
 .contacts .contacts__schedule {
 	font-size: 14px;
-  	line-height: 16px;
+  line-height: 16px;
 }
 
 .contacts .contacts__tel {
 	font-size: 22px;
-  	line-height: 24px;
+  line-height: 24px;
 }
 
+.carousel__item h3 {
+  font-size: 60px;
+  line-height: 60.35px;
+} 
+
+.carousel__button {
+  font: inherit;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  font-size: 32px;
+  line-height: 44px;
+  color: #ffffff;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  background: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  border-radius: 25px;
+  border-style: none;
+}
+
+.offers__list {
+  list-style: none;
+}
