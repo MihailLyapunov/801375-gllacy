@@ -32,9 +32,9 @@
             </li>
 	        </ul>
     	</nav>
-    	<p class="contacts">
-    		<span class="contacts__schedule">С 10 до 20, ежедневно</span>
-    		<span class="contacts__tel">8 812 450-25-25</span>
+    	<p class="header-contacts">
+    		<span class="header-contacts__schedule">С 10 до 20, ежедневно</span>
+    		<span class="header-contacts__tel">8 812 450-25-25</span>
     	</p>
     </header>
 
@@ -58,15 +58,15 @@
           <img src="img/bg/Мороженко5.png" width="367" height="582" alt="Мороженко5">
           <img src="img/bg/Мороженко6.png" width="326" height="523" alt="Мороженко6">
         </div>
-        <button class="carousel__button">Давайте оба!</button>
+        <button class="carousel__button" type="button">Давайте оба!</button>
         <button class="carousel__control carousel__control_active" type="button">
-          <span class="visually-hidden">Первое предложение</span>
+          <span class="visually-hidden">Первый слайд</span>
         </button>
         <button class="carousel__control" type="button">
-          <span class="visually-hidden">Второе предложение</span>
+          <span class="visually-hidden">Второй слайд</span>
         </button>
         <button class="carousel__control" type="button">
-          <span class="visually-hidden">Третье предложение</span>
+          <span class="visually-hidden">Третий слайд</span>
         </button>
       </section>
 
@@ -90,24 +90,24 @@
         <h2 class="visually-hidden">Хиты</h2>
         <ul class="main-products__list">
           <li class="main-products__item">
-            <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-            <a class="main-products__link"><img src="img/catalog/1.png" width="267" height="267" alt="icecream1"></a>
+            <a class="main-products__link" href="catalog.html"><img src="img/catalog/1.png" width="267" height="267" alt="icecream1"></a>
             <p class="main-products__price">310<span>/кг</span></p>
+            <h3><a href="catalog.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
           </li>
           <li class="main-products__item">
-            <h3>Сливочно-кофейное с кусочками шоколада</h3>
-            <a class="main-products__link"><img src="img/catalog/2.png" width="267" height="267" alt="icecream2"></a>
+            <a class="main-products__link" href="catalog.html"><img src="img/catalog/2.png" width="267" height="267" alt="icecream2"></a>
             <p class="main-products__price">380<span>/кг</span></p>
+            <h3><a href="catalog.html">Сливочно-кофейное с кусочками шоколада</a></h3>
           </li>
           <li class="main-products__item">
-            <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-            <a class="main-products__link"><img src="img/catalog/3.png" width="267" height="267" alt="icecream3"></a>
+            <a class="main-products__link" href="catalog.html"><img src="img/catalog/3.png" width="267" height="267" alt="icecream3"></a>
             <p class="main-products__price">355<span>/кг</span></p>
+            <h3><a href="catalog.html">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
           </li>
           <li class="main-products__item">
-            <h3>Сливочное крем-брюле с карамельной подливкой</h3>
-            <a class="main-products__link"><img src="img/catalog/4.png" width="267" height="267" alt="icecream4"></a>
+            <a class="main-products__link" href="catalog.html"><img src="img/catalog/4.png" width="267" height="267" alt="icecream4"></a>
             <p class="main-products__price">415<span>/кг</span></p>
+            <h3><a href="catalog.html">Сливочное крем-брюле с карамельной подливкой</a></h3>
           </li>
         </ul>
       </section>
@@ -130,25 +130,24 @@
         </ul>
       </section>
 
-      <section class="news">
-        <h2 class="visually-hidden">Новости</h2>
-        <ul class="news__list">
-          <li class="news__item">
-            <p>Новое в нашем блоге</p>
-            <h3>10 способов сервировки фруктовых щербетов к столу</h3>
-          </li>
-          <li class="news__item">
-            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <form class="news__subscription" action="https://echo.htmlacademy.ru" method="post">
-              <p>
-                <label for="news-email" class="visually-hidden">Почта для рассылки</label>
-                <input id="news-email" type="email" name="email" value="" placeholder="Электронная почта">
-              </p>
-              <button class="news__submit" type="submit">Отправить</button>
-            </form>
-          </li>
-        </ul>
-      </section>
+      <div class="index-columns">
+        <section class="news">
+          <h2 class="visually-hidden">Новости</h2>
+          <p>Новое в нашем блоге</p>
+          <h3><a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a></h3>
+        </section>
+        <section class="subscription">
+          <h2 class="visually-hidden">Рассылка</h2>
+          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+              <label for="news-email" class="visually-hidden">Почта для рассылки</label>
+              <input id="news-email" type="email" name="email" value="" placeholder="Электронная почта">
+            </p>
+            <button class="subscription__submit" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
 
       <section class="map-contacts">
         <h2 class="visually-hidden">Карта</h2>
@@ -156,8 +155,9 @@
           <img src="img/bg/map.png" width="1200" height="430" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
         </p>
         <div class="contacts">
-          <p>Адрес главного офиса и офлайн-магазина: <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
-          <p>Для заказов по телефону: <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
+          <p class="contacts__address">Адрес главного офиса и офлайн-магазина: <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
+          <p class="contacts__call">Для заказов по телефону:</p> 
+          <p class="contacts__tel"><span>8 812 450-25-25</span> (с 10 до 20 ежедневно)</p>
           <a class="contacts__link" href="feedback.html">Форма обратной связи</a>
         </div>
       </section>
@@ -184,7 +184,7 @@
         <a class="footer__logo" href="https://htmlacademy.ru">
           <img src="img/logo-htmlacademy-small.png" width="108" height="39" alt="Логотип htmlacademy">
         </a>
-        <p>Сделано в HTML Academy © 2017</p>
+        <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2017</p>
       </div>
     </footer>
     
