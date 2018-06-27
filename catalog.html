@@ -226,13 +226,13 @@
         </ul>
 
         <ul class="pagination">
-          <li class="pagination__item"><a href="#"><</a></li>
-          <li class="pagination__item pagination__item_active"><a>1</a></li>
-          <li class="pagination__item"><a href="#">2</a></li>
-          <li class="pagination__item"><a href="#">3</a></li>
-          <li class="pagination__item"><a href="#">4</a></li>
-          <li class="pagination__item"><a href="#">5</a></li>
-          <li class="pagination__item"><a href="#">></a></li>
+          <li class="pagination__item"><a class="pagination__link-back" href="#"><</a></li>
+          <li class="pagination__item pagination__item_active"><a class="pagination__link pagination__link_active">1</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
+          <li class="pagination__item"><a class="pagination__link-forward" href="#">></a></li>
         </ul>
       </section>
     </main>
@@ -310,14 +310,16 @@
       <table class="modal-cart__table cart-table">
         <tr>
           <td class="cart-table__delete"></td>
+          <td class="cart-table__pic"></td>
           <td class="cart-table__name">Пломбир с апельсиновым джемом</td>
-          <td class="cart-table__quantity">1,5 кг х 200 руб.</td>
+          <td class="cart-table__quantity">1,5 кг х <span>200 руб.</span></td>
           <td class="cart-table__price">300 руб.</td>
         </tr>     
         <tr>
           <td class="cart-table__delete"></td>
+          <td class="cart-table__pic"></td>
           <td class="cart-table__name">Клубничный пломбир с присыпкой из белого шоколада</td>
-          <td class="cart-table__quantity">1,5 кг х 300 руб.</td>
+          <td class="cart-table__quantity">1,5 кг х <span>300 руб.</span></td>
           <td class="cart-table__price">450 руб.</td>
         </tr>
       </table>

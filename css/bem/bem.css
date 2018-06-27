@@ -26,6 +26,7 @@ a:active {
 
 .header__logo,
 .main-products__link,
+.products__link,
 .footer__logo {
   border: none;
 }
@@ -106,7 +107,9 @@ a:active {
 .subscription__submit,
 .contacts__link,
 .login-form__button,
-.feedback-form__button {
+.feedback-form__button,
+.products__button-link,
+.modal-cart__button {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -117,7 +120,11 @@ a:active {
 .subscription__submit,
 .contacts__link,
 .login-form__button,
-.feedback-form__button {
+.feedback-form__button,
+.products__button-link,
+.modal-cart__button {
+  text-align: center;
+  vertical-align: middle;
   color: #ffffff;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   background: linear-gradient(to top, #e74a35 0%, #f26843 100%);
@@ -136,7 +143,11 @@ a:active {
 .login-form__button:hover,
 .login-form__button:focus,
 .feedback-form__button:hover,
-.feedback-form__button:focus {
+.feedback-form__button:focus,
+.products__button-link:hover,
+.products__button-link:focus,
+.modal-cart__button:hover,
+.modal-cart__button:focus {
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
   color: #ffffff;
   background: linear-gradient(to top, #ec6f5d 0%, #f58569 100%);
@@ -148,7 +159,9 @@ a:active {
 .contacts__link:active,
 .login-form__button:active,
 .login-form__button:active,
-.feedback-form__button:active {
+.feedback-form__button:active,
+.products__button-link:active,
+.modal-cart__button:active {
   box-shadow: inset 0 2px 2px rgba(148, 39, 24, 1);
   color: #ffffff;
   background: linear-gradient(to top, #f26843 0%, #e74a35 100%);
@@ -208,22 +221,26 @@ a:active {
   line-height: 24px;
 }
 
-.main-products__list {
+.main-products__list,
+.products__list {
   list-style: none;
 }
 
-.main-products__item h3 {
+.main-products__item h3,
+.products__item h3 {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
 }
 
-.main-products__price {
+.main-products__price,
+.products__price {
   font-size: 45px;
   line-height: 45px;
 }
 
-.main-products__price span {
+.main-products__price span,
+.products__price span {
   font-size: 30px;
 } 
 
@@ -420,6 +437,10 @@ a:active {
   font-weight: 700;
 }
 
+.filter fieldset {
+  border: none;
+}
+
 .filter legend {
   font-size: 14px;
   line-height: 16px;
@@ -489,4 +510,88 @@ a:active {
 .sort-dropdown__link:focus {
   color: #ffffff;
   background-color: #1e90ff;
+}
+
+
+
+.products__item:hover::after {
+  content: "";
+
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  opacity: 0.2;
+  position: absolute;
+}
+
+.pagination {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  list-style: none;
+}
+
+.pagination__link {
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+}
+
+.pagination__link:hover,
+.pagination__link:focus {
+  color: #ffffff;
+  background-color: #a1b4a9;
+}
+
+.pagination__link:active {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.pagination__link-back {
+  color: #a1b4a9;
+}
+
+.pagination__link-back:hover,
+.pagination__link-back:focus {
+  color: #a1b4a9;
+}
+
+.pagination__link-forward:hover,
+.pagination__link-forward:focus {
+  color: #ffffff;
+}
+
+.pagination__link-back,
+.pagination__link-forward {
+  border: none;
+}
+
+.pagination__link_active {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.pagination__link_active:hover,
+.pagination__link_active:focus {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.modal-cart {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
+
+.cart-table__quantity span {
+  color: #999999;
+}
+
+.modal-cart__summary {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
 }
