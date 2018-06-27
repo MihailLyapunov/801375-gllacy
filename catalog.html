@@ -21,23 +21,23 @@
         </ul>
         <ul class="user-menu">
           <li class="user-menu__item user-menu__search">
-            <a><span class="visually-hidden">Поиск</span></a>
+            <a class="user-menu__link"><span class="visually-hidden">Поиск</span></a>
           </li>
           <li class="user-menu__item user-menu__login">
-            <a href="login.html">Вход</a>
+            <a class="user-menu__link" href="login.html">Вход</a>
           </li>
           <li class="user-menu__item user-menu__cart">
-            <a>2 товара</a>
+            <a class="user-menu__link">2 товара</a>
           </li>
         </ul>
       </nav>
-      <p class="contacts">
-        <span class="contacts__schedule">С 10 до 20, ежедневно</span>
-        <span class="contacts__tel">8 812 450-25-25</span>
+      <p class="header-contacts">
+        <span class="header-contacts__schedule">С 10 до 20, ежедневно</span>
+        <span class="header-contacts__tel">8 812 450-25-25</span>
       </p>
     </header>
 
-    <main>
+    <main class="container">
 
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a><span class="breadcrumbs__divider"> >> </span></li>
@@ -51,23 +51,27 @@
         <h2 class="visually-hidden">Фильтры</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <div>
-            <fieldset>
+            <fieldset class="filter__sort">
               <legend>Сортировка:</legend>
-              <button class="filter__button filter__button_sort">по популярности</button>
+              <button class="filter__button filter__button_sort" type="button">по популярности</button>
               <div class="filter__sort-dropdown sort-dropdown visually-hidden">
                 <ul class="sort-dropdown__list">
-                  <li class="sort-dropdown__item"><button class="sort-dropdown__button">по популярности</button></li>
-                  <li class="sort-dropdown__item"><button class="sort-dropdown__button">сначала недорогие</button></li>
-                  <li class="sort-dropdown__item"><button class="sort-dropdown__button">сначала дорогие</button></li>
-                  <li class="sort-dropdown__item"><button class="sort-dropdown__button">по жирности</button></li>
+                  <li class="sort-dropdown__item"><a class="sort-dropdown__link" href="catalog.html">по популярности</a></li>
+                  <li class="sort-dropdown__item"><a class="sort-dropdown__link" href="catalog.html">сначала недорогие</a></li>
+                  <li class="sort-dropdown__item"><a class="sort-dropdown__link" href="catalog.html">сначала дорогие</a></li>
+                  <li class="sort-dropdown__item"><a class="sort-dropdown__link" href="catalog.html">по жирности</a></li>
                 </ul>
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter__price">
               <legend>Цена: 100 руб. – 500 руб.</legend>
-              <input class="visually-hidden" type="range" name="price" id="filter-price">  
+              <ul class="filter__list">
+                <li class="filter__option">
+                  <input class="visually-hidden" type="range" name="price" id="filter-price"> 
+                </li>
+              </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter__fat-content">
               <legend>Жирность:</legend>
               <ul class="filter__list">
                 <li class="filter__option">
@@ -90,7 +94,7 @@
             </fieldset>
           </div>
           <div>
-            <fieldset>
+            <fieldset class="filter__fillers">
               <legend>Наполнители:</legend>
               <ul class="filter__list">
                 <li class="filter__option">
@@ -261,7 +265,6 @@
     <div class="dropdown-catalog">
       <ul class="dropdown-catalog__menu catalog-menu">
         <li class="catalog-menu__item"><a class="catalog-menu__link" href="fresh.html">Новинки</a></li>
-        <hr>
         <li class="catalog-menu__item"><a class="catalog-menu__link" href="scrubbings.html">Щербеты</a></li>
         <li class="catalog-menu__item"><a class="catalog-menu__link" href="creamy.html">Сливочное</a></li>
         <li class="catalog-menu__item"><a class="catalog-menu__link" href="fruitIce.html">Фруктовый лед</a></li>

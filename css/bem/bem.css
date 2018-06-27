@@ -17,7 +17,9 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-a:hover {
+a:hover,
+a:focus,
+a:active {
   color: #ffbc9e;
   border-color: rgba(255, 188, 158, 0.3);
 }
@@ -39,15 +41,22 @@ a:hover {
 }
 
 .main-menu__link_catalog:hover,
-.main-menu__link_catalog:focus {
+.main-menu__link_catalog:focus, {
+  color: #323232;
   border-radius: 25px;
   background-color: #f8f7f4;  
+}
+
+.main-menu__link_catalog:active {
   color: #323232;
+  border-radius: 25px;
+  background-color: #f8f7f4;  
+  box-shadow: inset 0 2px 1px rgb(105, 105, 105);
 }
 
 .main-menu__link_active {
-  border-radius: 25px;
   color: #ffffff;
+  border-radius: 25px;
   background-color: #d07058;
 }
 
@@ -57,14 +66,16 @@ a:hover {
   font-weight: 500;
 }
 
-.user-menu a {
+.user-menu__link,
+.filter__list {
+  color: #ffffff;
   border-radius: 25px;
   background-color: #a1b4a9;
   border: none;
 }
 
-.user-menu a:hover,
-.user-menu a:focus {
+.user-menu__link:hover,
+.user-menu__link:focus {
   background-color: #f8f7f4;  
   color: #323232;
 }
@@ -88,13 +99,25 @@ a:hover {
   font: inherit;
   font-size: 32px;
   line-height: 44px;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+}
+
+.offers__button,
+.subscription__submit,
+.contacts__link,
+.login-form__button,
+.feedback-form__button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
 }
 
 .carousel__button,
 .offers__button,
 .subscription__submit,
-.contacts__link {
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+.contacts__link,
+.login-form__button,
+.feedback-form__button {
   color: #ffffff;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   background: linear-gradient(to top, #e74a35 0%, #f26843 100%);
@@ -109,7 +132,11 @@ a:hover {
 .subscription__submit:hover,
 .subscription__submit:focus,
 .contacts__link:hover,
-.contacts__link:focus {
+.contacts__link:focus,
+.login-form__button:hover,
+.login-form__button:focus,
+.feedback-form__button:hover,
+.feedback-form__button:focus {
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
   color: #ffffff;
   background: linear-gradient(to top, #ec6f5d 0%, #f58569 100%);
@@ -118,10 +145,47 @@ a:hover {
 .carousel__button:active,
 .offers__button:active,
 .subscription__submit:active,
-.contacts__link:active {
+.contacts__link:active,
+.login-form__button:active,
+.login-form__button:active,
+.feedback-form__button:active {
   box-shadow: inset 0 2px 2px rgba(148, 39, 24, 1);
   color: #ffffff;
   background: linear-gradient(to top, #f26843 0%, #e74a35 100%);
+}
+
+.subscription__form input,
+.feedback-form input,
+.feedback-form textarea {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+}
+
+.search-form input,
+.login-form input {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+}
+
+.subscription__form input:hover,
+.search-form input:hover,
+.login-form input:hover,
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.subscription__form input:focus,
+.search-form input:focus,
+.login-form input:focus,
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+  outline: none;
 }
 
 .offers__list {
@@ -211,12 +275,6 @@ a:hover {
   color: #5a5a5a;
 }
 
-.subscription__submit {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-}
-
 .contacts {
   color: #323232;
 }
@@ -272,4 +330,163 @@ a:hover {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
+}
+
+.dropdown-catalog {
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
+
+.catalog-menu {
+  list-style: none;
+}
+
+.catalog-menu__link {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+  display: block;
+  border: none;
+}
+
+.catalog-menu__link:hover,
+.catalog-menu__link:focus {
+  color: #323232;
+  background-color: #fbded7;
+}
+
+.catalog-menu__link:active {
+  background-color: #f6b5a5;
+}
+
+.catalog-menu__item:first-child .catalog-menu__link {
+  font-weight: 700;
+}
+
+.catalog-menu__item:first-child {
+  border-bottom: 1px solid #323232;
+}
+
+.modal-search {
+  color: #323232;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
+
+.modal-login {
+  color: #323232;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+}
+
+.login-form__link {
+  color: #323232;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(50, 50, 50, 1);
+}
+
+.login-form__link:hover,
+.login-form__link:focus {
+  color: #e84d37;
+  border-color: rgba(232, 77, 55, 0.3);
+}
+
+.modal-feedback {
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+.modal-feedback__promise {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  background-color: #f8f7f4;
+}
+
+
+.breadcrumbs {
+  list-style: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.container h1 {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.filter legend {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.filter__list {
+  list-style: none;
+}
+
+.filter__button,
+.filter__option label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.filter__button {
+  color: #ffffff;
+  border-radius: 25px;
+  background-color: #a1b4a9;
+  border: none;
+}
+
+.filter__button:hover,
+.filter__button:focus {
+  color: #323232;
+} 
+
+.filter__button_submit {
+  border: 2px solid #ffffff;
+}
+
+.filter__button_submit:hover
+.filter__button_submit:focus {
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+.filter__button_submit:active {
+  box-shadow: inset 0 2px 1px #696969;
+  background-color: #ededed;
+  /*border: 2px solid #ededed;*/
+}
+
+.sort-dropdown {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  background-color: #ffffff; 
+}
+
+.sort-dropdown__list {
+  list-style: none;
+}
+
+.sort-dropdown__link {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+  display: block;
+  border: none;
+}
+
+.sort-dropdown__link:hover,
+.sort-dropdown__link:focus {
+  color: #ffffff;
+  background-color: #1e90ff;
 }
